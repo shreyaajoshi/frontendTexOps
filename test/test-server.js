@@ -14,8 +14,8 @@ describe('GET /', function () {
       .reply(200, {
         "status": 200,
         "events": [
-          { "title": 'an event', "id": 1234, "description": 'something really cool' },
-          { "title": 'another event', id: 5678, "description": 'something even cooler' }
+          { "eventtitle": 'Marketing Gala' },
+         
         ]
       });
 
@@ -27,7 +27,7 @@ describe('GET /', function () {
         if (err) {
           return done(err);
         }
-        chai.assert.isTrue(res.text.includes("<h1>Welcome to [TEAM NAME'S] application</h1>"));
+        chai.assert.isTrue(res.text.includes("<h1 >Team TexOps Website</h1>"));
         return done();
       });
 
@@ -73,8 +73,7 @@ describe('POST /event', function () {
       .reply(200, {
         "status": 200,
         "events": [
-          { title: 'an event', id: 1, description: 'something really cool' },
-          { title: 'another event', id: 2, description: 'something even cooler' },
+           { "eventtitle": 'Marketing Gala' },
           data
         ]
       });
