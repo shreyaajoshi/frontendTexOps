@@ -1,8 +1,24 @@
-<ul >
+<ul style="list-style: none;">
   {{#events}}
-    <li>
-        <h2>{{ title }}</h2>
-        <p>{{ description }}</p>
-    </li>
-  {{/events}}
-</ul>
+    <li style="float: left;">
+    <div class="card" style="width: 20rem; margin-left: 1rem;" >
+<div class="card-body" >
+    <h6 class="card-title">{{ eventtitle }}</h6>
+    <p class="card-text">{{eventdescr }}</p>
+    <p>Likes: {{ eventlikes }}
+        <form method="POST" action="/event/like" style="float: left; padding: 0.2em;">
+        <input type="hidden" value="{{_id}}" name="id">
+        <input type="button" value="Like">
+        </form>
+        <form method="POST" action="/event/unlike"  style="float: left; padding: 0.2em;">
+        <input type="hidden" value="{{_id}}" name="id">
+        <input type="button" value="UN-Like">
+        </form>
+</div>    
+ </div>
+  </li>
+  <div style="display: block;"> 
+      {{/events}}
+  </div>
+ 
+  </ul>
