@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">  
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Team TexOps Website</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-</head>
+ </head>
 <body>
+<<<<<<< HEAD
   <div>
       <h1>Welcome to TexOps application</h1>
       <h1>Created from a branch</h1>
@@ -15,12 +17,35 @@
 </div>
 <div>
   <h2>Add an cool event</h2>
+=======
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div style="margin-top:50px;margin-left:20px;">
+      <h1 >Team TexOps Website</h1>
+      <p>This website is TexOps team event website. We are a group of five professionals - Aditi Vaid, Amit Mishra, Bipin Deosthale, Mohan Pulagam and Shreya Joshi</p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
+      </p>
+    </div>
+    <div class="row" style=""> {{{body}}}</div>
+    <div style="margin-left: 20px;"> 
+  <h5 >Add an event</h5>
+
+>>>>>>> 4b74e1af0382ab19e19d575767d882b565b06101
     <form action="/event" method="post">
-       title: <input name="title" type="text" /> <br />
-       description: <input name="description" type="text" /> <br />
-       <br />
-        <input type="submit" name="submit" value="submit" />
+    <div class="form-group">
+        <label for="txtTitle">Title</label>
+        <input class="form-control" id="txtTitle" name="title" type="text" style="width:200px" />
+    </div>
+    <div class="form-group" >
+        <label for="txtDesc">Description</label>
+        <input class="form-control" id="txtDesc" name="desc" type="text" style="width:200px"/>
+    </div>
+    <br/> <br/>
+    <button type="submit" class="btn btn-primary" style="margin-top: auto;" >Save Event</button>
     </form>
   </div>
-</body>
+ </body>
+<footer >
+  <center><p>&copy; Team TexOps 2021</p></center>
+</footer>
 </html>
